@@ -1,7 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-
 .logo-font {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
+    font-size: 36px;
+}
+
+header li a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color:#7B7B7B;
+}
+
+.home-banner {
+    background-image: url(../../media/home-banner.jpg);
+}
+
+.home-banner-block {
+    margin: 250px 75px 250px 75px;
 }
