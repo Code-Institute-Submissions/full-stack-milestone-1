@@ -3,7 +3,7 @@
         "pk": 1,
         "model": "products.product",
         "fields": {
-            "Brand": "MSI",
+            "brand": "MSI",
             "model_name": "GS66 STEALTH 10SFS-073UK",
             "sku": "314812",
             "stock": true,
@@ -25,7 +25,7 @@
         "pk": 2,
         "model": "products.product",
         "fields": {
-            "Brand": "MSI",
+            "brand": "MSI",
             "stock": true,
             "reccomended": false,
             "model_name": "GP66 LEOPARD 10UG-008UK",
@@ -47,7 +47,7 @@
         "pk": 3,
         "model": "products.product",
         "fields": {
-            "Brand": "MSI",
+            "brand": "MSI",
             "stock": true,
             "reccomended": false,
             "model_name": "GS66 STEALTH 10SGS-070UK",
@@ -69,7 +69,7 @@
         "pk": 4,
         "model": "products.product",
         "fields": {
-            "Brand": "Infinity",
+            "brand": "Infinity",
             "stock": true,
             "reccomended": false,
             "model_name": "INFINITY X10 ELITE GAMING PC",
@@ -91,7 +91,7 @@
         "pk": 5,
         "model": "products.product",
         "fields": {
-            "Brand": "Infinity",
+            "brand": "Infinity",
             "stock": true,
             "reccomended": false,
             "model_name": "INFINITY X10 ELITE GAMING PC",
@@ -113,7 +113,7 @@
         "pk": 6,
         "model": "products.product",
         "fields": {
-            "Brand": "Infinity",
+            "brand": "Infinity",
             "stock": true,
             "reccomended": false,
             "model_name": "INFINITY X10 ELITE LT GAMING PC",
@@ -135,7 +135,7 @@
         "pk": 7,
         "model": "products.product",
         "fields": {
-            "Brand": "Custom",
+            "brand": "Custom",
             "stock": true,
             "reccomended": false,
             "model_name": "C621 56-CORE WS CONFIGURATOR",
@@ -157,7 +157,7 @@
         "pk": 8,
         "model": "products.product",
         "fields": {
-            "Brand": "Custom",
+            "brand": "Custom",
             "stock": true,
             "reccomended": false,
             "model_name": "X299 18-CORE WS CONFIGURATOR",
@@ -179,7 +179,7 @@
         "pk": 9,
         "model": "products.product",
         "fields": {
-            "Brand": "Custom",
+            "brand": "Custom",
             "stock": true,
             "reccomended": false,
             "model_name": "C422 18-CORE WS CONFIGURATOR",
@@ -201,7 +201,7 @@
         "pk": 10,
         "model": "products.product",
         "fields": {
-            "Brand": "ASUS",
+            "brand": "ASUS",
             "stock": true,
             "reccomended": false,
             "model_name": "ROG ZEPHYRUS G14 GA401IH-BM057T",
@@ -223,7 +223,7 @@
         "pk": 11,
         "model": "products.product",
         "fields": {
-            "Brand": "Custom",
+            "brand": "Custom",
             "stock": true,
             "reccomended": false,
             "model_name": "WEEKLY SALES II GAMING PC",
