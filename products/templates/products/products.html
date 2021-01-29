@@ -4,14 +4,20 @@
 <div class="container">
     <div class="row">
         {% for product in products %}
-        <div class="col-lg-4 col-md-6 col-sm-12 col-xxl-3">
+        <div class="col-xl-4 col-md-6 col-sm-12">
             <div class="card product-card">
                 <img class="card-img-top" src="{{ product.image_url }}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">{{ product.model_name }}</h5>
-                    <p class="card-text">{{ product.description }}</p>
+                    <p>Key features</p>
+                    <ul>
+                        <li>{{ product.cpu | truncatechars:30 }}</li>
+                        <li>{{ product.gpu | truncatechars:30 }}</li>
+                        <li>{{ product.storage | truncatechars:30 }}</li>
+                        <li>{{ product.ram | truncatechars:30 }}</li>
+                    </ul>
                     <div class="price-button">
-                        <span class="card-price">${{ product.price }}</span>
+                        <span class="card-price"><strong>${{ product.price }}</strong></span>
                         <a href="#" class="btn btn-outline-black float-xl-right">DETAILS</a>
                     </div>
                 </div>
