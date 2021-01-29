@@ -1,26 +1,26 @@
 [
   {
-    "id": 1,
+    "pk": 1,
     "model": "products.category",
     "fields": {
       "name": "work",
-      "friendly_name": "Workstation"
+      "display_name": "Workstation"
     }
   },
   {
-    "id": 2,
+    "pk": 2,
     "model": "products.category",
     "fields": {
       "name": "gaming",
-      "friendly_name": "Gaming"
+      "display_name": "Gaming"
     }
   },
   {
-    "id": 3,
+    "pk": 3,
     "model": "products.category",
     "fields": {
       "name": "home",
-      "friendly_name": "Home"
+      "display_name": "Home"
     }
   }
 ]
