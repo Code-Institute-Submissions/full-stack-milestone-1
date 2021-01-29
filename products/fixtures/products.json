@@ -1,0 +1,266 @@
+[
+    {
+        "id": 1,
+        "model": "products.product",
+        "fields": {
+            "Brand": "MSI",
+            "model_name": "GS66 STEALTH 10SFS-073UK",
+            "sku": "314812",
+            "stock": true,
+            "reccomended": false,
+            "description": "A powerful gaming laptop that will destroy competitors on the battlefield.",
+            "spec": [
+                "Operating System: Windows 10 Home (64-bit Edition)",
+                "CPU: Intel® Core™ i9-10980HK Processor - 8 Core, 16 Thread - 2.4GHz, 5.3GHz Turbo - 16MB Cache",
+                "Graphics Card (GPU): NVIDIA® GeForce RTX™ 2070 Super Max-Q - GDDR6 8GB - DirectX® 12.1",
+                "M.2 SSD Drive: 1TB M.2 NVMe Solid State Drive",
+                "Memory (RAM): 32GB (16GBx2) 2666MHz DDR4 SODIMM Memory"
+            ],
+            "price": 2249.00,
+            "category": 2,
+            "type": "laptop",
+            "image_url": "https://www.cyberpowersystem.co.uk/images/nb/MSIGS66S10S073UK/combo_400.png",
+            "image": "1.png"
+        }
+    },
+    {
+        "id": 2,
+        "model": "products.product",
+        "fields": {
+            "Brand": "MSI",
+            "stock": true,
+            "reccomended": false,
+            "model_name": "GP66 LEOPARD 10UG-008UK",
+            "sku": "314813",
+            "description": "A powerful gaming laptop that will destroy competitors on the battlefield.",
+            "spec": [
+                "Operating System: Windows 10 Home (64-bit Edition)",
+                "CPU: Intel® Core™ i9-10980HK Processor - 8 Core, 16 Thread - 2.4GHz, 5.3GHz Turbo - 16MB Cache",
+                "Graphics Card (GPU): NVIDIA® GeForce RTX™ 2070 Super Max-Q - GDDR6 8GB - DirectX® 12.1",
+                "M.2 SSD Drive: 512GB NVMe PCIe Gen3x4 Solid State Drive",
+                "Memory (RAM): 16GB (2x8GB) 3200Mhz DDR4 SODIMM Memory"
+            ],
+            "price": 1420.00,
+            "category": 2,
+            "type": "laptop",
+            "image_url": "https://www.cyberpowersystem.co.uk/images/nb/MSI10UG008UK/combo_400.png",
+            "image": "2.png"
+        }
+    },
+    {
+        "id": 3,
+        "model": "products.product",
+        "fields": {
+            "Brand": "MSI",
+            "stock": true,
+            "reccomended": false,
+            "model_name": "GS66 STEALTH 10SGS-070UK",
+            "sku": "314814",
+            "description": "A powerful gaming laptop that will destroy competitors on the battlefield.",
+            "spec": [
+                "Operating System: Windows 10 Home (64-bit Edition)",
+                "CPU (Processor): Intel® Core™ i9-10980HK Processor - 8 Core, 16 Thread - 2.4GHz, 5.3GHz Turbo - 16MB Cache",
+                "Graphics Card (GPU): NVIDIA® GeForce RTX™ 2070 Super Max-Q - GDDR6 8GB - DirectX® 12.1",
+                "M.2 SSD Drive: 1TB M.2 NVMe Solid State Drive",
+                "Memory (RAM): 16GB (2x8GB) 3200Mhz DDR4 SODIMM Memory"
+            ],
+            "price": 2750.00,
+            "category": 2,
+            "type": "laptop",
+            "image_url": "https://www.cyberpowersystem.co.uk/images/nb/MSIGS66S10S073UK/combo_400.png",
+            "image": "3.png"
+        }
+    },
+    {
+        "id": 4,
+        "model": "products.product",
+        "fields": {
+            "Brand": "Infinity",
+            "stock": true,
+            "reccomended": false,
+            "model_name": "INFINITY X10 ELITE GAMING PC",
+            "sku": "314831",
+            "description": "A powerful gaming PC that will destroy competitors on the battlefield.",
+            "spec": [
+                "Operating System: Windows 10 Home (64-bit Edition)",
+                "CPU (Processor): Intel® Core™ i7-10700KF- 8-Core 3.80GHz, 5.00GHz Turbo - 16MB Cache, Ultimate OC Compatible (No On-board Graphics)",
+                "Graphics Card (GPU): AMD Radeon RX 6900 XT 16GB - DX12® - VR Ready, HDMI, DVI, DP, 4 Monitor Support (Single Card)",
+                "M.2 SSD Drive: 1TB (1x1TB) WD Blue SN550 M.2 NVMe PCIe SSD - 2400MB/s Read & 1950MB/s Write (Single Drive)",
+                "Memory (RAM): 16GB (2x8GB) DDR4/3200mhz Dual Channel Memory (HyperX Fury w/Heat Spreader)"
+            ],
+            "price": 2130.00,
+            "category": 2,
+            "type": "pc",
+            "image_url": "https://www.cyberpowersystem.co.uk/images/cs/COR220T/CS_COR220T_400.png",
+            "image": "4.png"
+        }
+    },
+    {
+        "id": 5,
+        "model": "products.product",
+        "fields": {
+            "Brand": "Infinity",
+            "stock": true,
+            "reccomended": false,
+            "model_name": "INFINITY X10 ELITE GAMING PC",
+            "sku": "314836",
+            "description": "A powerful gaming PC that will destroy competitors on the battlefield.",
+            "spec": [
+                "Operating System: Windows 10 Home (64-bit Edition)",
+                "CPU (Processor): Intel® Core™ i7-10700KF- 8-Core 3.80GHz, 5.00GHz Turbo - 16MB Cache, Ultimate OC Compatible (No On-board Graphics)",
+                "Graphics Card (GPU): MSI GeForce® RTX 3070 8GB - Ray Tracing Technology, DX12®, VR Ready, HDMI, DP - 4 Monitor Support (Pre-Order) (Single Card)",
+                "M.2 SSD Drive: 1TB (1x1TB) WD Blue SN550 M.2 NVMe PCIe SSD - 2400MB/s Read & 1950MB/s Write (Single Drive)",
+                "Memory (RAM): 16GB (2x8GB) DDR4/3200mhz Dual Channel Memory (HyperX Fury w/Heat Spreader)"
+            ],
+            "price": 1675.00,
+            "category": 2,
+            "type": "pc",
+            "image_url": "https://www.cyberpowersystem.co.uk/images/cs/corsair4000d/CS-429-144_400.png",
+            "image": "5.png"
+        }
+    },
+    {
+        "id": 6,
+        "model": "products.product",
+        "fields": {
+            "Brand": "Infinity",
+            "stock": true,
+            "reccomended": false,
+            "model_name": "INFINITY X10 ELITE LT GAMING PC",
+            "sku": "314840",
+            "description": "A powerful gaming PC that will destroy competitors on the battlefield.",
+            "spec": [
+                "Operating System: Windows 10 Home (64-bit Edition)",
+                "CPU (Processor): Intel® Core™ i5-10400F - 6-Core 2.90GHz, 4.30GHz Turbo - 12MB Cache (No On-board Graphics)",
+                "Graphics Card (GPU): AMD Radeon RX 580 8GB - DX12® - VR Ready, HDMI, DVI, DP, 5 Monitor Support (Single Card)",
+                "M.2 SSD Drive: 1TB (1x1TB) WD Blue SN550 M.2 NVMe PCIe SSD - 2400MB/s Read & 1950MB/s Write (Single Drive)",
+                "Memory (RAM): 16GB (2x8GB) DDR4/3200mhz Dual Channel Memory"
+            ],
+            "price": 830.00,
+            "category": 2,
+            "type": "pc",
+            "image_url": "https://www.cyberpowersystem.co.uk/images/cs/corsair4000d/CS-429-144_400.png",
+            "image": "6.png"
+        }
+    },
+    {
+        "id": 7,
+        "model": "products.product",
+        "fields": {
+            "Brand": "Custom",
+            "stock": true,
+            "reccomended": false,
+            "model_name": "C621 56-CORE WS CONFIGURATOR",
+            "sku": "314842",
+            "description": "A powerful workstation PC that will increase efficiency in the workplace.",
+            "spec": [
+                "Operating System: Windows 10 Home (64-bit Edition)",
+                "CPU (Processor): 2 x Intel Xeon Silver 4208 6-Core 12-Thread 2.10GHz, 3.00Hz Turbo, 11MB L3 Cache",
+                "Graphics Card (GPU): NVIDIA® Quadro P4000 8GB Workstation Video Card (Single Card)",
+                "M.2 SSD Drive: 1TB (1x1TB) WD Blue SN550 M.2 NVMe PCIe SSD - 2400MB/s Read & 1950MB/s Write (Single Drive)",
+                "Memory (RAM): 64GB (4x16GB) DDR4/2666mhz ECC Registered Memory"
+            ],
+            "price": 3055.00,
+            "category": 1,
+            "type": "pc",
+            "image_url": "https://www.cyberpowersystem.co.uk/images/cs/DEFINER6/CS_DEFINER6_400.png",
+            "image": "7.png"
+        }
+    },
+    {
+        "id": 8,
+        "model": "products.product",
+        "fields": {
+            "Brand": "Custom",
+            "stock": true,
+            "reccomended": false,
+            "model_name": "X299 18-CORE WS CONFIGURATOR",
+            "sku": "314843",
+            "description": "A powerful workstation PC that will increase efficiency in the workplace.",
+            "spec": [
+                "Operating System: Windows 10 Home (64-bit Edition)",
+                "CPU (Processor): Intel® Core™ i9-10900X Processor - 10-Core 20-Threads 3.70GHz, 4.50 GHz Turbo - 19.25MB Cache (Pre-Order Only)",
+                "Graphics Card (GPU): NVIDIA® Quadro P2000 5GB Workstation Video Card (Single Card)",
+                "M.2 SSD Drive: 1TB (1x1TB) WD Blue SN550 M.2 NVMe PCIe SSD - 2400MB/s Read & 1950MB/s Write (Single Drive)",
+                "Memory (RAM): 16GB (2x8GB) DDR4/3200mhz Dual Channel Memory (HyperX Fury w/Heat Spreader)"
+            ],
+            "price": 1900.00,
+            "category": 1,
+            "type": "pc",
+            "image_url": "https://www.cyberpowersystem.co.uk/images/cs/DEFINER6/CS_DEFINER6_400.png",
+            "image": "7.png"
+        }
+    },
+    {
+        "id": 9,
+        "model": "products.product",
+        "fields": {
+            "Brand": "Custom",
+            "stock": true,
+            "reccomended": false,
+            "model_name": "C422 18-CORE WS CONFIGURATOR",
+            "sku": "314844",
+            "description": "A powerful workstation PC that will increase efficiency in the workplace.",
+            "spec": [
+                "Operating System: Windows 10 Home (64-bit Edition)",
+                "CPU (Processor): Intel Xeon W-2225 4-Core 8-Thread 4.10GHz, 4.60GHz Turbo, 8.25MB Cache",
+                "Graphics Card (GPU): NVIDIA® Quadro P2000 5GB Workstation Video Card (Single Card)",
+                "M.2 SSD Drive: 1TB (1x1TB) WD Blue SN550 M.2 NVMe PCIe SSD - 2400MB/s Read & 1950MB/s Write (Single Drive)",
+                "Memory (RAM): 32GB (4x8GB) DDR4/2666mhz ECC Registered Memory"
+            ],
+            "price": 2020.00,
+            "category": 1,
+            "type": "pc",
+            "image_url": "https://www.cyberpowersystem.co.uk/images/cs/DEFINER6/CS_DEFINER6_400.png",
+            "image": "7.png"
+        }
+    },
+    {
+        "id": 10,
+        "model": "products.product",
+        "fields": {
+            "Brand": "ASUS",
+            "stock": true,
+            "reccomended": false,
+            "model_name": "ROG ZEPHYRUS G14 GA401IH-BM057T",
+            "sku": "314845",
+            "description": "A great home laptop perfect for studying or working from home.",
+            "spec": [
+                "Operating System: Windows 10 Home (64-bit Edition)",
+                "CPU (Processor): AMD Ryzen™ 5 4600HS Processor - 6 Core, 12 Thread - 3.0GHz base, 4.0GHz Turbo - 8MB Cache",
+                "Graphics Card (GPU): NVIDIA® GeForce® GTX 1650 With ROG Boost - 4GB GDDR6 - DirectX® 12.1",
+                "M.2 SSD Drive: 512GB M.2 NVMe Solid State Drive",
+                "Memory (RAM): 8GB DDR4 Memory"
+            ],
+            "price": 733.00,
+            "category": 3,
+            "type": "laptop",
+            "image_url": "https://www.cyberpowersystem.co.uk/images/nb/ASUSROGBM057T/combo_400.png",
+            "image": "10.png"
+        }
+    },
+    {
+        "id": 11,
+        "model": "products.product",
+        "fields": {
+            "Brand": "Custom",
+            "stock": true,
+            "reccomended": false,
+            "model_name": "WEEKLY SALES II GAMING PC",
+            "sku": "314847",
+            "description": "A great home laptop perfect for studying or working from home with gaming lighting.",
+            "spec": [
+                "Operating System: Windows 10 Home (64-bit Edition)",
+                "CPU (Processor): Intel® Core™ i5-9400F - 6-Core 2.90GHz, 4.10GHz Turbo - 9MB Cache (No On-board Graphics)",
+                "Graphics Card (GPU): AMD Radeon RX 580 8GB - DX12® - VR Ready, HDMI, DVI, DP, 5 Monitor Support (Single Card)",
+                "M.2 SSD Drive: 512GB M.2 NVMe Solid State Drive",
+                "Memory (RAM): 16GB (2x8GB) DDR4/3200mhz Dual Channel Memory (HyperX Fury w/Heat Spreader)"
+            ],
+            "price": 790.00,
+            "category": 3,
+            "type": "pc",
+            "image_url": "https://www.cyberpowersystem.co.uk/images/cs/onyxia/cs-450-127_400.png",
+            "image": "11.png"
+        }
+    }
+]
