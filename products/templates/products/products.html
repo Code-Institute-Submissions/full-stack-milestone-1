@@ -4,13 +4,16 @@
 <div class="container">
     <div class="row">
         {% for product in products %}
-        <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="card">
+        <div class="col-lg-4 col-md-6 col-sm-12 col-xxl-3">
+            <div class="card product-card">
                 <img class="card-img-top" src="{{ product.image_url }}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">{{ product.model_name }}</h5>
                     <p class="card-text">{{ product.description }}</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <div class="price-button">
+                        <span class="card-price">${{ product.price }}</span>
+                        <a href="#" class="btn btn-outline-black float-xl-right">DETAILS</a>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,3 +1,9 @@
+/* typography */
+
+h1,h2,h3,h4,h5,h6,a,p,span,button {
+   font-family: 'Poppins', sans-serif; 
+}
+
 .logo-font {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
@@ -9,6 +15,19 @@ header li a {
     font-weight: 600;
     color:#7B7B7B;
 }
+/* Global */
+.btn-outline-black {
+    border: 1px solid black;
+    border-radius: 0;
+    padding: 10px 25px;
+}
+.btn-outline-black:hover {
+    border-radius: 0;
+    padding: 10px 25px;
+    color: white;
+    background-color: black;
+}
+
 
 .home-banner {
     background-image: url(../../media/home-banner.jpg);
@@ -16,4 +35,54 @@ header li a {
 
 .home-banner-block {
     margin: 250px 75px 250px 75px;
+}
+
+
+/* Product Styles */
+.product-card {
+    background-color: #F8F8F8;
+    box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.15);
+    -webkit-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.15);
+    margin: 25px 12.5px;
+}
+
+.product-card h5 {
+    margin-bottom: 25px;
+}
+
+.card-img-top {
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.price-button {
+    position: relative;
+    margin: 30px 0 20px 0;
+}
+
+.price-button a {
+    position: absolute;
+    right: 6px;
+    bottom: -10px;
+}
+
+
+/* media queries */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+}
+}
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
 }
