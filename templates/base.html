@@ -131,6 +131,13 @@
             </div>
         </nav>
     </header>
+
+{% if messages %}
+<div class="message-container">
+    {% for alert in messages %}
+        {% include 'includes/toasts/toast_success' %}
+    {% endfor %}
+</div>
     {% block content %}
     {% endblock %}
     <script>

@@ -3,7 +3,9 @@
 h1,h2,h3,h4,h5,h6,a,p,span,button, li {
    font-family: 'Poppins', sans-serif; 
 }
-
+a:hover, .close:hover {
+    cursor: pointer;
+}
 .logo-font {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
