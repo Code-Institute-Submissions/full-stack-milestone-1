@@ -76,3 +76,6 @@ def product_single(request, product_id):
         'product': product,
     }
     return render(request, 'products/product_single.html', context)
+
+
+

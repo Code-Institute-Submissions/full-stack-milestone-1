@@ -17,6 +17,7 @@ def cart_items(request):
             'item_id': item_id,
             'quantity': quantity,
             'product': product,
+            
         })
 
     if total < settings.FREE_DELIVERY_THRESHOLD:

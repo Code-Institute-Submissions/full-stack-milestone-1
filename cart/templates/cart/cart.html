@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load cart_tools %}
 {% block content %}
 <div class="container">
     <div class="row cart-banner">
@@ -12,9 +12,66 @@
 <div class="container">
     <div class="row">
         {% if cart_items %}
+        <!-- Shopping cart table -->
         <div class="table-responsive">
-            {{ cart_items }}
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col" class="border-0 bg-light">
+                            <div class="p-2 px-3 text-uppercase">Product</div>
+                        </th>
+                        <th scope="col" class="border-0 bg-light">
+                            <div class="py-2 text-uppercase">Price</div>
+                        </th>
+                        <th scope="col" class="border-0 bg-light">
+                            <div class="py-2 text-uppercase">Quantity</div>
+                        </th>
+                        <th scope="col" class="border-0 bg-light">
+                            <div class="py-2 text-uppercase">Total</div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in cart_items %}
+                    <tr>
+                        <th scope="row" class="border-0">
+                            <div class="p-2">
+                                <img src="{{ item.product.image_url }}" alt="" width="70" class="img-fluid">
+                                <div class="ml-3 d-inline-block align-middle">
+                                    <h5 class="mb-0"> <a href="#"
+                                            class="text-dark d-inline-block align-middle">{{ item.product.model_name }}</a>
+                                    </h5><span class="text-muted font-weight-normal font-italic d-block">Brand:
+                                        {{ item.product.brand }}</span>
+                                </div>
+                            </div>
+                        </th>
+                        <td class="border-0 align-middle">{{ item.product.price }}</td>
+                        <td class="border-0 align-middle">
+                            <form class="form update-form" method="POST" action="{% url 'modify_cart' item.item_id %}">
+                                {% csrf_token %}
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                        </div>
+                                        <input class="form-control form-control-sm qty_input" type="number"
+                                            name="quantity" value="{{ item.quantity }}" min="1" max="99"
+                                            data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
+                                        <div class="input-group-append">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <a class="update-link text-info"><small>Update</small></a>
+                            <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"
+                                data-product_size="{{ item.size }}"><small>Remove</small></a>
+                        </td>
+                        <td class="border-0 align-middle">{{ item.product.price | subtotal:item.quantity }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
         </div>
+        <!-- End -->
         {% else %}
         <a href="{% url 'products' %}">
             <p>It would appear that you cart is empty! How about we keep browsing?</p>
@@ -22,7 +79,26 @@
         {% endif %}
     </div>
 </div>
+<script type="text/javascript">
+    // Update quantity on click
+    $('.update-link').click(function (e) {
+        var form = $(this).prev('.update-form');
+        form.submit();
+    })
 
 
+        // Remove item and reload on click
+    $('.remove-item').click(function (e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var url = `/cart/remove/${itemId}/`;
+        var data = { 'csrfmiddlewaretoken': csrfToken};
+
+        $.post(url, data)
+            .done(function () {
+                location.reload();
+            });
+    })
+</script>
 
 {% endblock %}
