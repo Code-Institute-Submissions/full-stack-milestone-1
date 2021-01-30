@@ -42,6 +42,27 @@ header li a {
     background-color: white;
 }
 
+/* Toasts */
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+    max-height: 300px;
+}
+.toast-body {
+    max-height: 350px;
+    overflow: scroll;
+}
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
+
 
 
 .home-banner {

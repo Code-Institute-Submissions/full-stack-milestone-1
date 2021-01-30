@@ -17,6 +17,7 @@ def add_to_cart(request, item_id):
 
     if item_id in list(cart.keys()):
         cart[item_id] += quantity
+        messages.success(request, f'{product.model_name} has been succesfully added to your cart')
     else:
         cart[item_id] = quantity
         messages.success(request, f'{product.model_name} has been succesfully added to your cart')
