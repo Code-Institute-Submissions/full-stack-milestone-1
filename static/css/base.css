@@ -51,9 +51,10 @@ header li a {
     z-index: 99999999999;
     max-height: 300px;
 }
-.toast-body {
-    max-height: 350px;
-    overflow: scroll;
+.cart-notification-wrapper {
+    height: 100px;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 .custom-toast {
     overflow: visible;
