@@ -40,13 +40,12 @@
         <nav class="navbar navbar-expand-lg">
             <div class="container">
                 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-lg-left">
-                    <a class="navbar-brand text-dark logo-font" href="#">Seamless.</a>
+                    <a class="navbar-brand text-dark logo-font" href="{% url 'home' %}">Seamless.</a>
                 </div>
-
                 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 justify-content-center">
                     <ul class="navbar-nav w-auto mx-auto">
                         <li class="nav-item active">
-                            <a class="nav-link m-3" href="#">Home</a>
+                            <a class="nav-link m-3" href="{% url 'home' %}">Home</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle m-3" href="#" id="navbarDropdown" role="button"
@@ -58,7 +57,7 @@
                                 <a class="dropdown-item" href="{% url 'products' %}?category=home">Home</a>
                                 <a class="dropdown-item" href="{% url 'products' %}?category=gaming">Gaming</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="{% url 'products' %}">All Products</a>
+                                <a class="dropdown-item" href="{% url 'products' %}?category=gaming,home,work">All Products</a>
                             </div>
                         </li>
                         <li class="nav-item">

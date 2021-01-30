@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
-from .models import Product, Category
+from .models import Product, Category, Device
 from django.db.models import Q
 from django.contrib import messages
 from django.http import HttpResponse
@@ -14,6 +14,7 @@ def all_products(request):
     products = Product.objects.all()
     query = None
     categories = None
+    devices = None
     sort = None
     direction = None
     if request.GET:
@@ -23,6 +24,9 @@ def all_products(request):
             if sortkey == 'model_name':
                 sortkey = 'lower_name'
                 products = products.annotate(lower_name=Lower('model_name'))
+            
+            if sortkey == "catergory":
+                sortkey = "category__name"
 
             if 'direction' in request.GET:
                 direction = request.GET['direction']
@@ -35,14 +39,18 @@ def all_products(request):
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
 
+        if 'device' in request.GET:
+            devices = request.GET['device'].split(',')
+            products = products.filter(device__name__in=devices)
+            devices = Device.objects.filter(name__in=devices)
+
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
                 messages.error(request, "Please enter some text to search")
                 return redirect(reverse('products'))
 
-            queries = Q(model_name__icontains=query) | Q(description__icontains=query) | Q(
-                device_type__icontains=query) | Q(cpu__icontains=query) | Q(ram__icontains=query) | Q(gpu__icontains=query)
+            queries = Q(model_name__icontains=query) | Q(description__icontains=query) | Q(cpu__icontains=query) | Q(ram__icontains=query) | Q(gpu__icontains=query)
             products = products.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
@@ -51,6 +59,7 @@ def all_products(request):
         'products': products,
         'search_term': query,
         'current_categories': categories,
+        'current_devices': devices,
         'current_sorting': current_sorting,
     }
 
