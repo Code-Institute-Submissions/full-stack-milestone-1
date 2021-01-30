@@ -28,6 +28,19 @@ header li a {
     background-color: black;
 }
 
+.btn-outline-white {
+    border: 2px solid white;
+    border-radius: 0;
+    padding: 10px 25px;
+}
+.btn-outline-white:hover {
+    border-radius: 0;
+    padding: 10px 25px;
+    color: black;
+    background-color: white;
+}
+
+
 
 .home-banner {
     background-image: url(../../media/home-banner.jpg);
