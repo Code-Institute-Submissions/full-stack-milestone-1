@@ -17,7 +17,7 @@ header li a {
 }
 /* Global */
 .btn-outline-black {
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 0;
     padding: 10px 25px;
 }

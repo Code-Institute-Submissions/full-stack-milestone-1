@@ -21,10 +21,10 @@ def all_products(request):
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
             sort = sortkey
-            if sortkey == 'model_name':
-                sortkey = 'lower_name'
-                products = products.annotate(lower_name=Lower('model_name'))
-            
+            if sortkey == 'modname':
+                sortkey = 'lower_modname'
+                products = products.annotate(lower_modname=Lower('model_name'))
+
             if sortkey == "catergory":
                 sortkey = "category__name"
 
