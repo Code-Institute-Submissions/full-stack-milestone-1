@@ -1,5 +1,4 @@
 from django.db import models
-
 # Create your models here.
 
 
@@ -30,8 +29,10 @@ class Device(models.Model):
 
 class Product(models.Model):
 
-    category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
-    device = models.ForeignKey('Device', null=True, blank=True, on_delete=models.SET_NULL)
+    category = models.ForeignKey(
+        'Category', null=True, blank=True, on_delete=models.SET_NULL)
+    device = models.ForeignKey(
+        'Device', null=True, blank=True, on_delete=models.SET_NULL)
     brand = models.CharField(max_length=254)
     model_name = models.CharField(max_length=254)
     sku = models.CharField(max_length=254, null=True, blank=True)
@@ -49,4 +50,3 @@ class Product(models.Model):
 
     def __str__(self):
         return self.model_name
-

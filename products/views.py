@@ -50,7 +50,8 @@ def all_products(request):
                 messages.error(request, "Please enter some text to search")
                 return redirect(reverse('products'))
 
-            queries = Q(model_name__icontains=query) | Q(description__icontains=query) | Q(cpu__icontains=query) | Q(ram__icontains=query) | Q(gpu__icontains=query)
+            queries = Q(model_name__icontains=query) | Q(description__icontains=query) | Q(
+                cpu__icontains=query) | Q(ram__icontains=query) | Q(gpu__icontains=query)
             products = products.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
@@ -66,12 +67,12 @@ def all_products(request):
     return render(request, 'products/products.html', context)
 
 
-def product_single(request, product_name):
+def product_single(request, product_id):
     # Will open the single product page
-    # seo friendly as the url is the product name
+    product = get_object_or_404(Product, model_name=product_id)
 
-    product = get_object_or_404(Product, model_name=product_name)
+    print(product_id)
     context = {
-        'product': product
+        'product': product,
     }
     return render(request, 'products/product_single.html', context)

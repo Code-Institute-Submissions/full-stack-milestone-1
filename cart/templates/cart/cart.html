@@ -13,7 +13,7 @@
     <div class="row">
         {% if cart_items %}
         <div class="table-responsive">
-
+            {{ cart_items }}
         </div>
         {% else %}
         <a href="{% url 'products' %}">
