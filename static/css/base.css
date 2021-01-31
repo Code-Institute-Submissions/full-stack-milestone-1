@@ -29,6 +29,19 @@ header li a {
     color: white;
     background-color: black;
 }
+.btn-black-bold {
+    border-radius: 0;
+    padding: 10px 25px;
+    color: white;
+    background-color: black;
+}
+.btn-black-bold:hover {
+    border-radius: 0;
+    padding: 10px 25px;
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+}
 
 .btn-outline-white {
     border: 2px solid white;

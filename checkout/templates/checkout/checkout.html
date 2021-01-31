@@ -16,7 +16,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-12 col-lg-6 order-lg-last mb-5">
+        <div class="col-12 col-lg-6 order-lg-last mb-3">
             <h4>Order Summary ({{ product_count }})</h4>
             <div class="product-details-container">
                 
@@ -67,12 +67,12 @@
             <p class="">Fill out the form below to finalise your order.</p>
             <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                 {% csrf_token %}
-                <fieldset class="rounded  mb-5">
+                <fieldset class="rounded  mb-3">
                     <legend class="fieldset-label small text-black  w-auto">Details</legend>
                     {{ order_form.full_name | as_crispy_field }}
                     {{ order_form.email | as_crispy_field }}
                 </fieldset>
-                <fieldset class="rounded  mb-5">
+                <fieldset class="rounded  mb-3">
                     <legend class="fieldset-label small text-black  w-auto">Delivery</legend>
                     {{ order_form.phone_number | as_crispy_field }}
                     {{ order_form.postcode | as_crispy_field }}
@@ -105,15 +105,12 @@
                     <input type="hidden" value="" name="client_secret">
                 </fieldset>
 
-                <div class="submit-button text-right mt-5 mb-2">
+                <div class="submit-button text-right mt-5 mb-3">
                     <a href="{% url 'view_cart' %}" class="btn btn-outline-black rounded-0">
-                        <span class="icon">
-                            <i class="fas fa-chevron-left"></i>
-                        </span>
-                        <span class="font-weight-bold">Adjust cart</span>
+                        <span class="font-weight-bold">Modify cart</span>
                     </a>
-                    <button id="submit-button" class="btn btn-black rounded-0">
-                        <span class="font-weight-bold">Complete Order</span>
+                    <button id="submit-button" class="btn btn-black-bold rounded-0">
+                        <span class="font-weight-bold">Secure Purchase</span>
                         <span class="icon">
                             <i class="fas fa-lock"></i>
                         </span>
