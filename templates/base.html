@@ -21,6 +21,8 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/ba65fbb3e9.js" crossorigin="anonymous"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+
 
     {% block corecss %}
     <!-- Bootstrap CSS -->
@@ -157,8 +159,8 @@
     {% block content %}
     {% endblock %}
 
-
-    <script type="text/javascript">
+    {% block postloadjs %}
+        <script type="text/javascript">
         $('#search-icon').click(function () {
             $('#search-show').slideToggle('slow');
         });
@@ -169,6 +171,9 @@
 
         $('.toast').toast('show');
     </script>
+    {% endblock %}
+
+
 
 </body>
 
