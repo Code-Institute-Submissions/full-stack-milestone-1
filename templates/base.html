@@ -12,9 +12,14 @@
     {% endblock %}
 
     <!-- Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/ba65fbb3e9.js" crossorigin="anonymous"></script>
 
     {% block corecss %}
@@ -26,7 +31,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     {% endblock %}
+    {% block extra_css %}
 
+    {% endblock %}
     <title>Seamless. {% block extra_title %}{% endblock %}</title>
 </head>
 
@@ -52,7 +59,8 @@
                                 <a class="dropdown-item" href="{% url 'products' %}?category=home">Home</a>
                                 <a class="dropdown-item" href="{% url 'products' %}?category=gaming">Gaming</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="{% url 'products' %}?category=gaming,home,work">All Products</a>
+                                <a class="dropdown-item" href="{% url 'products' %}?category=gaming,home,work">All
+                                    Products</a>
                             </div>
                         </li>
                         <li class="nav-item">
@@ -66,8 +74,8 @@
                                 <div class="col-12 col-lg-4 search-form">
                                     <form method="GET" action="{% url 'products' %}">
                                         <div class="input-group w-100">
-                                            <input class="form-control rounded-0" type="text"
-                                                name="q" placeholder="Search for a product">
+                                            <input class="form-control rounded-0" type="text" name="q"
+                                                placeholder="Search for a product">
                                             <div class="input-group-append">
                                                 <button class="form-control btn btn-black border border-black rounded-0"
                                                     type="submit">
@@ -128,29 +136,29 @@
     </header>
 
     {% if messages %}
-        <div class="message-container">
-            {% for message in messages %}
-                {% with message.level as level %}
-                    {% if level == 40 %}
-                        {% include 'includes/toasts/toast_error.html' %}
-                    {% elif level == 30 %}
-                        {% include 'includes/toasts/toast_warning.html' %}
-                    {% elif level == 25 %}
-                        {% include 'includes/toasts/toast_success.html' %}
-                    {% else %}
-                        {% include 'includes/toasts/toast_info.html' %}
-                    {% endif %}
-                {% endwith %}
-            {% endfor %}
-        </div>
+    <div class="message-container">
+        {% for message in messages %}
+        {% with message.level as level %}
+        {% if level == 40 %}
+        {% include 'includes/toasts/toast_error.html' %}
+        {% elif level == 30 %}
+        {% include 'includes/toasts/toast_warning.html' %}
+        {% elif level == 25 %}
+        {% include 'includes/toasts/toast_success.html' %}
+        {% else %}
+        {% include 'includes/toasts/toast_info.html' %}
+        {% endif %}
+        {% endwith %}
+        {% endfor %}
+    </div>
     {% endif %}
 
-    
+
     {% block content %}
     {% endblock %}
 
 
-        <script type="text/javascript">
+    <script type="text/javascript">
         $('#search-icon').click(function () {
             $('#search-show').slideToggle('slow');
         });

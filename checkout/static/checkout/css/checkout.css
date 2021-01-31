@@ -1,0 +1,15 @@
+.form-group {
+    margin: 0.75rem 0;
+}
+
+.form-check {
+    padding-left: 0 !important;
+}
+
+
+.checkout-banner {
+    background-image: url(../../../../media/group-banner.png);
+    padding: 120px 20px;
+    color: white;
+    margin-bottom: 50px;
+}

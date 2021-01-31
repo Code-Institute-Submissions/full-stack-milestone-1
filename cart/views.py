@@ -10,7 +10,7 @@ def view_cart(request):
 
 
 def add_to_cart(request, item_id):
-    product = Product.objects.get_object_or_404(pk=item_id)
+    product = Product.objects.get(pk=item_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     cart = request.session.get('cart', {})
