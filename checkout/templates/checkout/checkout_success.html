@@ -8,7 +8,9 @@
 <div class="container d-md-none d-lg-block">
     <div class="row checkout-banner">
         <h2>Order Confirmation!</h2>
-        <a href="" class=""><button class="btn-sm btn-outline-white">PROFILE</button> </a>
+        {% if from_account %}
+        <a href="{% url 'account' %}" class=""><button class="btn-sm btn-outline-white">ACCOUNT</button></a>
+        {% endif %}
     </div>
 </div>
 
