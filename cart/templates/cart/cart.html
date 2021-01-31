@@ -4,7 +4,6 @@
 <div class="container">
     <div class="row cart-banner">
         <h2>Your cart</h2>
-        <a href="" class="btn btn-outline-white">CHECKOUT</a>
     </div>
 </div>
 
@@ -42,8 +41,7 @@
                                 <img class="img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
                             {% endif %}
                                 <div class="ml-3 d-inline-block align-middle">
-                                    <h5 class="mb-0"> <a href="#"
-                                            class="text-dark d-inline-block align-middle">{{ item.product.model_name }}</a>
+                                    <h5 class="mb-0">{{ item.product.model_name }}
                                     </h5><span class="text-muted font-weight-normal font-italic d-block">Brand:
                                         {{ item.product.brand }}</span>
                                 </div>
@@ -74,6 +72,7 @@
                     {% endfor %}
                 </tbody>
             </table>
+                    <a href="{% url 'checkout' %}" class="btn btn-black-bold">CHECKOUT</a>
         </div>
         <!-- End -->
         {% else %}
