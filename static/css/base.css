@@ -50,7 +50,7 @@ header li a {
     border: none;
     font-size: 30px;
 }
-.btn-outline-white {
+.btn-outline-white, .btn-outline-white-home {
     border: 2px solid white;
     border-radius: 0;
     padding: 10px 25px;
