@@ -89,10 +89,21 @@ header li a {
 .home-banner {
     background-image: url(../../media/home-banner.jpg);
 }
-
+@media (min-width:992px) {
 .home-banner-block {
     margin: 250px 75px 250px 75px;
+}}
+@media (max-width:992px) {
+    .home-banner-block {
+    margin: 30px 35px;
 }
+}
+
+.home-banner-block a {
+    color: white !important;
+}
+
+
 
 
 /* Product Styles */
