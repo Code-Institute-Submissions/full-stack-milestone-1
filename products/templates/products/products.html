@@ -15,11 +15,11 @@
                                 (low to high)</option>
                             <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price
                                 (high to low)</option>
-                            <option value="modname_asc"
-                                {% if current_sorting == 'modname_asc' %}selected{% endif %}>Name
+                            <option value="modname_asc" {% if current_sorting == 'modname_asc' %}selected{% endif %}>
+                                Name
                                 (A-Z)</option>
-                            <option value="modname_desc"
-                                {% if current_sorting == 'modname_desc' %}selected{% endif %}>Name
+                            <option value="modname_desc" {% if current_sorting == 'modname_desc' %}selected{% endif %}>
+                                Name
                                 (Z-A)</option>
                         </select>
                     </div>
@@ -35,15 +35,16 @@
                 {% for product in products %}
                 <div class="col-xl-4 col-md-6 col-sm-12">
                     <div class="card product-card">
-                      {% if product.image %}
-                                <a href="{% url 'product_single' product.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
-                                </a>
-                                {% else %}
-                                <a href="{% url 'product_single' product.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                                </a>
-                                {% endif %}
+                        {% if product.image %}
+                        <a href="{% url 'product_single' product.id %}">
+                            <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                        </a>
+                        {% else %}
+                        <a href="{% url 'product_single' product.id %}">
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
+                                alt="{{ product.name }}">
+                        </a>
+                        {% endif %}
                         <div class="card-body">
                             <h5 class="card-title">{{ product.model_name }}</h5>
                             {% if product.category %}
@@ -62,6 +63,7 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
                 {% endfor %}
             </div>
@@ -71,26 +73,26 @@
 
 
 
-    <script type="text/javascript">
-        $('#sort-selector').change(function() {
-            var selector = $(this);
-            var currentUrl = new URL(window.location);
+<script type="text/javascript">
+    $('#sort-selector').change(function () {
+        var selector = $(this);
+        var currentUrl = new URL(window.location);
 
-            var selectedVal = selector.val();
-            if(selectedVal != "reset"){
-                var sort = selectedVal.split("_")[0];
-                var direction = selectedVal.split("_")[1];
+        var selectedVal = selector.val();
+        if (selectedVal != "reset") {
+            var sort = selectedVal.split("_")[0];
+            var direction = selectedVal.split("_")[1];
 
-                currentUrl.searchParams.set("sort", sort);
-                currentUrl.searchParams.set("direction", direction);
+            currentUrl.searchParams.set("sort", sort);
+            currentUrl.searchParams.set("direction", direction);
 
-                window.location.replace(currentUrl);
-            } else {
-                currentUrl.searchParams.delete("sort");
-                currentUrl.searchParams.delete("direction");
+            window.location.replace(currentUrl);
+        } else {
+            currentUrl.searchParams.delete("sort");
+            currentUrl.searchParams.delete("direction");
 
-                window.location.replace(currentUrl);
-            }
-        })
-    </script>
+            window.location.replace(currentUrl);
+        }
+    })
+</script>
 {% endblock %}

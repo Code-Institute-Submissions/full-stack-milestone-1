@@ -7,6 +7,7 @@ from .forms import UserProfileForm
 from checkout.models import Order
 
 
+@login_required
 def account(request):
     """ Display the user's profile. """
     account = get_object_or_404(UserProfile, user=request.user)

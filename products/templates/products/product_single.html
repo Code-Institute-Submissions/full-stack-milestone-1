@@ -59,6 +59,12 @@
                     <a href="{% url 'products' %}" class="btn-outline-black">SHOP</a>
                 </div>
                 {% endif %}
+                                            {% if request.user.is_superuser %}
+                                            <small class="mb-3">
+                                                <a href="{% url 'edit_product' product.id %}">Edit</a>
+                                                <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                            </small>
+                                            {% endif %}
             </div>
         </div>
     </div>
@@ -85,7 +91,7 @@
             </form>
             {% else %}
             <a href="{% url 'account_login' %}">
- <p>Looks like you're not logged in. Login here to review and reccomend upgrades to custom products</p>
+                <p>Looks like you're not logged in. Login here to review and reccomend upgrades to custom products</p>
             </a>
             {% endif %}
         </div>
