@@ -1,6 +1,8 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
-from .models import Product, Category, Device
+from .models import Product, Category, Device, Reviews, Upgrade
 from django.db.models import Q
+from django.contrib.auth.decorators import login_required
+from .forms import ReviewForm, UpgradeForm, ProductForm
 from django.contrib import messages
 from django.http import HttpResponse
 from django.db.models.functions import Lower
@@ -71,11 +73,54 @@ def product_single(request, product_id):
     # Will open the single product page
     product = get_object_or_404(Product, model_name=product_id)
 
+    form = ReviewForm()
+    # displays and assigns review model / form
+    if 'review' in request.POST:
+        review = request.POST.get("review")
+        review = Reviews(user=request.user, product=product, review=review)
+        review.save()
+    reviews_already_posted = Reviews.objects.filter(product=product)
+
+    form2 = UpgradeForm()
+    # displays and assigns review model / form
+    if 'upgrade' in request.POST:
+        upgrade = request.POST.get("upgrade")
+        upgrade = Upgrade(user=request.user, product=product, upgrade=upgrade)
+        upgrade.save()
+    upgrades_already_posted = Upgrade.objects.filter(product=product)
+
     print(product_id)
     context = {
         'product': product,
+        'form': form,
+        'form2': form2,
+        'reviews': reviews_already_posted,
+        'upgrade': upgrades_already_posted,
     }
     return render(request, 'products/product_single.html', context)
 
 
+@login_required
+def add_product(request):
+    """ Add a product to the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
 
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            product = form.save()
+            messages.success(request, 'Successfully added product!')
+            return redirect(reverse('product_detail', args=[product.id]))
+        else:
+            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+    else:
+        form = ProductForm()
+
+    template = 'products/add_product.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)

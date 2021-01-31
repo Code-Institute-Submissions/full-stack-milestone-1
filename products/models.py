@@ -1,4 +1,5 @@
 from django.db import models
+from accounts.models import User
 # Create your models here.
 
 
@@ -50,3 +51,18 @@ class Product(models.Model):
 
     def __str__(self):
         return self.model_name
+
+
+class Reviews(models.Model):
+    """ reviews section for products, user must
+     be logged in to view this section on product page """
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    review = models.CharField(max_length=1200, blank=False)
+
+
+class Upgrade(models.Model):
+    """ sectoin to reccomend upgrading CUSTOM product (must be category CUSTOM) """
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    upgrade = models.CharField(max_length=1200, blank=False)
