@@ -15,7 +15,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', ' ')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://full-stack-milestone.herokuapp.com/', 'localhost']
 
 
 # Application definition
@@ -108,7 +108,6 @@ WSGI_APPLICATION = 'seamless.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-
 
 if 'DATABASE_URL' in os.environ:
     DATABASES = {

@@ -16,7 +16,6 @@
             "storage": "M.2 SSD Drive: 1TB M.2 NVMe Solid State Drive",
             "price": 2249.00,
             "category": 2,
-            "device_type": "laptop",
             "image_url": "https://www.cyberpowersystem.co.uk/images/nb/MSIGS66S10S073UK/combo_400.png",
             "image": "1.png"
         }
@@ -38,7 +37,6 @@
             "storage": "M.2 SSD Drive: 512GB NVMe PCIe Gen3x4 Solid State Drive",
             "price": 1420.00,
             "category": 2,
-            "device_type": "laptop",
             "image_url": "https://www.cyberpowersystem.co.uk/images/nb/MSI10UG008UK/combo_400.png",
             "image": "2.png"
         }
@@ -60,7 +58,6 @@
             "storage": "M.2 SSD Drive: 1TB M.2 NVMe Solid State Drive",
             "price": 2750.00,
             "category": 2,
-            "device_type": "laptop",
             "image_url": "https://www.cyberpowersystem.co.uk/images/nb/MSIGS66S10S073UK/combo_400.png",
             "image": "3.png"
         }
@@ -82,7 +79,6 @@
             "storage": "M.2 SSD Drive: 1TB (1x1TB) WD Blue SN550 M.2 NVMe PCIe SSD - 2400MB/s Read & 1950MB/s Write (Single Drive)",
             "price": 2130.00,
             "category": 2,
-            "device_type": "pc",
             "image_url": "https://www.cyberpowersystem.co.uk/images/cs/COR220T/CS_COR220T_400.png",
             "image": "4.png"
         }
@@ -104,7 +100,6 @@
             "storage": "M.2 SSD Drive: 1TB (1x1TB) WD Blue SN550 M.2 NVMe PCIe SSD - 2400MB/s Read & 1950MB/s Write (Single Drive)",
             "price": 1675.00,
             "category": 2,
-            "device_type": "pc",
             "image_url": "https://www.cyberpowersystem.co.uk/images/cs/corsair4000d/CS-429-144_400.png",
             "image": "5.png"
         }
@@ -126,7 +121,6 @@
             "storage": "M.2 SSD Drive: 1TB (1x1TB) WD Blue SN550 M.2 NVMe PCIe SSD - 2400MB/s Read & 1950MB/s Write (Single Drive)",
             "price": 830.00,
             "category": 2,
-            "device_type": "pc",
             "image_url": "https://www.cyberpowersystem.co.uk/images/cs/corsair4000d/CS-429-144_400.png",
             "image": "6.png"
         }
@@ -148,7 +142,6 @@
             "storage": "M.2 SSD Drive: 1TB (1x1TB) WD Blue SN550 M.2 NVMe PCIe SSD - 2400MB/s Read & 1950MB/s Write (Single Drive)",
             "price": 3055.00,
             "category": 1,
-            "device_type": "pc",
             "image_url": "https://www.cyberpowersystem.co.uk/images/cs/DEFINER6/CS_DEFINER6_400.png",
             "image": "7.png"
         }
@@ -170,7 +163,6 @@
             "storage": "M.2 SSD Drive: 1TB (1x1TB) WD Blue SN550 M.2 NVMe PCIe SSD - 2400MB/s Read & 1950MB/s Write (Single Drive)",
             "price": 1900.00,
             "category": 1,
-            "device_type": "pc",
             "image_url": "https://www.cyberpowersystem.co.uk/images/cs/DEFINER6/CS_DEFINER6_400.png",
             "image": "7.png"
         }
@@ -192,7 +184,6 @@
             "storage": "M.2 SSD Drive: 1TB (1x1TB) WD Blue SN550 M.2 NVMe PCIe SSD - 2400MB/s Read & 1950MB/s Write (Single Drive)",
             "price": 2020.00,
             "category": 1,
-            "device_type": "pc",
             "image_url": "https://www.cyberpowersystem.co.uk/images/cs/DEFINER6/CS_DEFINER6_400.png",
             "image": "7.png"
         }
@@ -214,7 +205,6 @@
             "storage": "M.2 SSD Drive: 512GB M.2 NVMe Solid State Drive",
             "price": 733.00,
             "category": 3,
-            "device_type": "laptop",
             "image_url": "https://www.cyberpowersystem.co.uk/images/nb/ASUSROGBM057T/combo_400.png",
             "image": "10.png"
         }
@@ -236,7 +226,6 @@
             "storage": "M.2 SSD Drive: 512GB M.2 NVMe Solid State Drive",
             "price": 790.00,
             "category": 3,
-            "device_type": "pc",
             "image_url": "https://www.cyberpowersystem.co.uk/images/cs/onyxia/cs-450-127_400.png",
             "image": "11.png"
         }
